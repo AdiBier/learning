@@ -1,0 +1,26 @@
+GET http://localhost:8080/step2/testMe
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/step2/add?valA=12&valB=4
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/step2/square/5
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+POST http://localhost:8080/step2/multiply
+Content-Type: application/json;charset=UTF8
+Accept: */*
+Cache-Control: no-cache
+
+{ "valA": 5, "valB": 3 }
+
+###

@@ -1,0 +1,31 @@
+GET http://localhost:8080/step1/testMe
+# accept i cache-control sa headerami
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/step1/add?valA=12&valB=4
+#parametry dodawania jako parametry URLa valA i valB
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/step1/square/5
+#parametr potegowania jako czesc urla
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+POST http://localhost:8080/step1/multiply
+# content-type jest potrzebny, zeby protokol http wiedzial jak interpretowac twoj request
+Content-Type: application/json;charset=UTF8
+Accept: */*
+Cache-Control: no-cache
+
+{ "valA": 5, "valB": 3 }
+### to jest body requestu zwane także payloadem requestu
+
+###
